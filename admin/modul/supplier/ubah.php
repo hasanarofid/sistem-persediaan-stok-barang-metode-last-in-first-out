@@ -30,7 +30,7 @@
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
               <span class="sr-only">navigation</span> Menu <i class="fa fa-bars"></i>
             </button>
-            <a class="navbar-brand">Inventory</a>
+            <a class="navbar-brand">Afterlife</a>
           </div>
           <?php 
          	$id = $_GET['id_sup'];
@@ -58,11 +58,11 @@
                   <i class="fa fa-user"></i> Data Admin
                 </a>
               </li>
-               <li>
+               <!-- <li>
                 <a href="?m=petugas&s=awal">
                   <i class="fa fa-users"></i> Data Petugas
                 </a>
-              </li>
+              </li> -->
                             <li>
                 <a href="?m=supplier&s=awal">
                   <i class="fa fa-building"></i> Data Supplier
@@ -150,7 +150,7 @@
         <div class="container">
           <div class="row">
             <div class="col-lg-12">
-            <p class="text-muted" style="font-size: 16px;">Copyright &copy;<script>document.write(new Date().getFullYear());</script> Muhamad Zibran Fitadiyatama All rights reserved</p>
+            <p class="text-muted" style="font-size: 16px;">Copyright &copy;<script>document.write(new Date().getFullYear());</script> Afterlife All rights reserved</p>
             </div>
           </div>
         </div>

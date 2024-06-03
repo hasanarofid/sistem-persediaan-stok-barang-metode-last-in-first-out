@@ -85,7 +85,7 @@
 </li>
 </ul>
 <hr class="medium">
-<p class="text-muted" style="font-size: 16px;">Copyright &copy;<script>document.write(new Date().getFullYear());</script> Muhamad Zibran Fitadiyatama All rights reserved</p>
+<p class="text-muted" style="font-size: 16px;">Copyright &copy;<script>document.write(new Date().getFullYear());</script> Afterlife All rights reserved</p>
 </div>
 </section>
 </footer>

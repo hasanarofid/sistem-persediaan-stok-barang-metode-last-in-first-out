@@ -30,7 +30,7 @@
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
               <span class="sr-only">navigation</span> Menu <i class="fa fa-bars"></i>
             </button>
-            <a class="navbar-brand">Inventory</a>
+            <a class="navbar-brand">Afterlife</a>
           </div>
           <?php 
           $id = $_SESSION['idinv'];
@@ -69,11 +69,11 @@
                   <i class="fa fa-user"></i> Data Admin
                 </a>
               </li>
-               <li>
+               <!-- <li>
                 <a href="?m=petugas&s=awal">
                   <i class="fa fa-users"></i> Data Petugas
                 </a>
-              </li>
+              </li> -->
                             <li>
                 <a href="?m=supplier&s=awal">
                   <i class="fa fa-building"></i> Data Supplier
@@ -131,6 +131,12 @@
       </div>
       <div class="modal-body">
         <form action="?m=barang&s=simpan" method="POST" enctype="multipart/form-data">
+        <div class="form-group">
+    <label for="foto">Foto Barang</label>
+    <input type="file" class="form-control-file" id="foto" name="foto">
+</div>
+
+
         <div class="form-group">
     <label for="exampleInputEmail1">Kode Barang</label>
     <input type="text" class="form-control" id="exampleInputEmail1" name="kode_brg" maxlength="5" aria-describedby="emailHelp" placeholder="Masukkan Kode Barang">
@@ -232,6 +238,7 @@
                                         <thead>
                                             <tr>
                                                 
+                                 <th>Foto</th>
                                  <th>Kode Barang</th>
                                  <th>Nama Barang</th>
                                    <th>Stok</th>
@@ -284,7 +291,7 @@
         <div class="container">
           <div class="row">
             <div class="col-lg-12">
-            <p class="text-muted" style="font-size: 16px;">Copyright &copy; <script>document.write(new Date().getFullYear());</script> Muhamad Zibran Fitadiyatama. All rights reserved</p>
+            <p class="text-muted" style="font-size: 16px;">Copyright &copy; <script>document.write(new Date().getFullYear());</script> Afterlife. All rights reserved</p>
             </div>
           </div>
         </div>

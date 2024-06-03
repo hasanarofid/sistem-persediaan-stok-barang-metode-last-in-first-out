@@ -36,6 +36,7 @@ foreach ($data_rak as $row):
 
   <tr>
                                          
+                                                <td><?php echo $row['foto']; ?></td>
                                                 <td><?php echo $row['kode_brg']; ?></td>
                                                 <td><?php echo $row['nama_brg']; ?></td>
                                                 <td><?php echo $row['stok']; ?></td>

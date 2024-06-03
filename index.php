@@ -15,11 +15,17 @@
 
     <!-- tema css -->
     <link href="css/tampilan.css" rel="stylesheet">
-	<title>Inventory Barang</title>
+	<title>Afterlife</title>
 </head>
 <body>
 
-
+<style>
+  .logo {
+    display: inline-block;
+    height: 40px; /* Sesuaikan tinggi gambar dengan kebutuhan Anda */
+    margin-right: 10px; /* Sesuaikan margin antara gambar dan teks */
+}
+</style>
 <!-- Menu -->
     <nav class="navbar navbar-default navbar-fixed-top navbar-custom  ">
       <div class="container">
@@ -27,7 +33,10 @@
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
             <span class="sr-only">navigation</span> Menu <i class="fa fa-bars"></i>
           </button>
-          <a class="navbar-brand">Inventory</a>
+          <a class="navbar-brand">
+        <img src="images/afterlife/logoafterlife.png" alt="Logo" class="logo">
+          <!-- Afterlife -->
+      </a>
         </div>
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -58,13 +67,13 @@
       </ol>
       <div class="carousel-inner" role="listbox">
         <div class="item active">
-          <img class="first-slide" src="images/logistic1.jpg" alt="First slide">
+          <img class="first-slide" src="images/afterlife/bg1.jpg" alt="First slide">
         </div>
         <div class="item">
-          <img class="second-slide" src="images/logistic2.jpg" alt="Second slide">
+          <img class="second-slide" src="images/afterlife/bg2.jpg" alt="Second slide">
         </div>
         <div class="item">
-          <img class="third-slide" src="images/logistic3.jpg" alt="Third slide">
+          <img class="third-slide" src="images/afterlife/bg3.jpg" alt="Third slide">
         </div>
       </div>
       <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
@@ -91,8 +100,8 @@
         <br>
         
           <a href="admin/login.php" target="_blank"><button class="btn btn-primary" style="size: 50px;">ADMIN</button></a>
-          <br><br>
-           <a href="petugas/login_petugas.php" target="_blank"><button class="btn btn-warning" style="size: 50px;">PETUGAS</button></a>
+          <!-- <br><br>
+           <a href="petugas/login_petugas.php" target="_blank"><button class="btn btn-warning" style="size: 50px;">PETUGAS</button></a> -->
           
           
           
@@ -143,7 +152,7 @@
 </li>
 </ul>
 <hr class="medium">
-<p class="text-muted" style="font-size: 16px;">Copyright &copy;<script>document.write(new Date().getFullYear());</script> Muhamad Zibran Fitadiyatama All rights reserved</p>
+<p class="text-muted" style="font-size: 16px;">Copyright &copy;<script>document.write(new Date().getFullYear());</script> Afterlife All rights reserved</p>
 </div>
 </section>
 </footer>
