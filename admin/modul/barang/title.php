@@ -147,6 +147,18 @@
     <input type="text" class="form-control" id="exampleInputEmail1" name="nama_brg" aria-describedby="emailHelp" placeholder="Masukkan Nama Barang">
     <small id="emailHelp" class="form-text text-muted">Masukkan Nama Barang</small>
   </div>
+
+  <div class="form-group">
+    <label for="Warna">Warna</label>
+    <input type="text" class="form-control" id="warna" name="warna"  aria-describedby="WarnaHelp" placeholder="Masukkan Warna Barang">
+    <small id="WarnaHelp" class="form-text text-muted">Masukkan Warna Barang</small>
+  </div>
+
+  <div class="form-group">
+    <label for="Size">Size</label>
+    <input type="text" class="form-control" id="size" name="size" aria-describedby="sizeHelp" placeholder="Masukkan Size Barang">
+    <small id="sizeHelp" class="form-text text-muted">Masukkan Size Barang</small>
+  </div>
   <div class="form-group">
     <label for="exampleInputEmail1">Stok Barang</label>
     <input type="text" class="form-control" id="exampleInputEmail1" name="stok" aria-describedby="emailHelp" placeholder="Masukkan Stok Barang">
@@ -241,6 +253,8 @@
                                  <th>Foto</th>
                                  <th>Kode Barang</th>
                                  <th>Nama Barang</th>
+                                 <th>Warna</th>
+                                 <th>Size</th>
                                    <th>Stok</th>
                                  <th>Rak</th>
                                    <th>Supplier</th>

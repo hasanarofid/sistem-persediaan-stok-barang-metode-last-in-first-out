@@ -35,10 +35,12 @@ foreach ($data_rak as $row):
  ?>
 
   <tr>
-                                         
-                                                <td><?php echo $row['foto']; ?></td>
+  <td><img src="../images/admin/<?php echo $row['foto'];?> " height=150/></td>
+
                                                 <td><?php echo $row['kode_brg']; ?></td>
                                                 <td><?php echo $row['nama_brg']; ?></td>
+                                                <td><?php echo $row['warna']; ?></td>
+                                                <td><?php echo $row['size']; ?></td>
                                                 <td><?php echo $row['stok']; ?></td>
                                                 <td><?php echo $row['rak']; ?></td>
                                                 <td><?php echo $row['supplier']; ?></td>
