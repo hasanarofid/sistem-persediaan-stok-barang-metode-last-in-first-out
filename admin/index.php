@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 include_once "sesi_admin.php";
 $modul=(isset($_GET['m']))?$_GET['m']:"awal";
 $jawal="Admin || INV Admin";
@@ -11,8 +12,6 @@ switch($modul){
     case 'rak': $aktif="Rak"; $judul="Modul Rak "; include "modul/rak/index.php"; break;
     case 'barang': $aktif="Barang"; $judul="Modul Barang"; include "modul/barang/index.php"; break;
      case 'barangKeluar': $aktif="Barang Keluar"; $judul="Modul Barang Keluar "; include "modul/barangKeluar/index.php"; break;
-    
-   
 }
 
 ?>

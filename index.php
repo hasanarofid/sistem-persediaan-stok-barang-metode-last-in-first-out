@@ -26,6 +26,7 @@
     margin-right: 10px; /* Sesuaikan margin antara gambar dan teks */
 }
 </style>
+
 <!-- Menu -->
     <nav class="navbar navbar-default navbar-fixed-top navbar-custom  ">
       <div class="container">
@@ -67,13 +68,16 @@
       </ol>
       <div class="carousel-inner" role="listbox">
         <div class="item active">
-          <img class="first-slide" src="images/afterlife/bg1.jpg" alt="First slide">
+          <img class="first-slide" src="images/afterlife/kaos-pria1.jpg" alt="First slide">
         </div>
         <div class="item">
-          <img class="second-slide" src="images/afterlife/bg2.jpg" alt="Second slide">
+          <img class="second-slide" src="images/afterlife/kaos-pria2.jpg" alt="Second slide">
         </div>
         <div class="item">
-          <img class="third-slide" src="images/afterlife/bg3.jpg" alt="Third slide">
+          <img class="third-slide" src="images/afterlife/kaos-pria3.jpg" alt="Third slide">
+        </div>
+        <div class="item">
+          <img class="third-slide" src="images/afterlife/kaos-pria4.jpg" alt="Third slide">
         </div>
       </div>
       <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
