@@ -9,6 +9,7 @@ switch($modul){
 	case 'hapus': include "modul/barang/hapus.php"; break;
 	case 'ubah': include "modul/barang/ubah.php"; break;
 	case 'update': include "modul/barang/update.php"; break;
+	case 'import': include "modul/barang/import_excel.php"; break;
 	
 }
 ?>

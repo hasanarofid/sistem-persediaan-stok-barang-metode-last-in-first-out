@@ -185,31 +185,32 @@
         </div>
       </div>
 
-      <!-- Modal for importing data -->
+      <!-- Modal -->
       <div class="modal fade" id="importModal" tabindex="-1" role="dialog" aria-labelledby="importModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="importModalLabel">Import Excel</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <form action="simpan.php" method="POST" enctype="multipart/form-data">
-                <div class="form-group">
-                  <label for="excelFile">Select Excel File</label>
-                  <input type="file" class="form-control-file" id="excelFile" name="file" required>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                  <button type="submit" name="import" class="btn btn-primary">Import</button>
-                </div>
-              </form>
-            </div>
+          <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h5 class="modal-title" id="importModalLabel">Import Excel</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                      </button>
+                  </div>
+                  <form action="?m=barang&s=simpan" method="POST" enctype="multipart/form-data">
+                      <div class="modal-body">
+                          <div class="form-group">
+                              <label for="file">Excel File</label>
+                              <input type="file" class="form-control-file" id="file" name="file">
+                          </div>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                          <button type="submit" name="import" class="btn btn-primary">Import</button>
+                      </div>
+                  </form>
+              </div>
           </div>
-        </div>
       </div>
+
 
       <div class="row">
         <center>

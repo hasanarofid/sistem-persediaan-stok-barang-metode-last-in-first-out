@@ -106,6 +106,13 @@
     <div class="row">
 
     	<form action="?m=barang&s=update" method="POST" enctype="multipart/form-data">
+      <div class="form-group">
+    <label>Foto</label>
+    <img src="../images/admin/<?php echo $r['foto'];?>" height="150"><br>
+    <input type="checkbox" name="ubahfoto" value="true">Klik jika ingin ubah foto <br>
+    <input type="file"  aria-describedby="emailHelp" name="inpfoto" placeholder="Masukkan Foto">
+    <small id="emailHelp" class="form-text text-muted">Masukkan Foto</small>
+  </div>
         <div class="form-group">
     <label for="exampleInputEmail1">Kode Barang</label>
     <input type="text" class="form-control" id="exampleInputEmail1" name="kode_brg" value="<?php echo $r['kode_brg']; ?>" aria-describedby="emailHelp" placeholder="Masukkan Kode Barang">
@@ -116,6 +123,18 @@
     <input type="text" class="form-control" id="exampleInputEmail1" value="<?php echo $r['nama_brg']; ?>" name="nama_brg" aria-describedby="emailHelp" placeholder="Masukkan Nama Barang">
 
   </div>
+
+  <div class="form-group">
+                  <label for="Warna">Warna</label>
+                  <input type="text" class="form-control" id="warna" value="<?php echo $r['warna']; ?>" name="warna" aria-describedby="WarnaHelp" placeholder="Masukkan Warna Barang">
+                  <small id="WarnaHelp" class="form-text text-muted">Masukkan Warna Barang</small>
+                </div>
+                <div class="form-group">
+                  <label for="Size">Size</label>
+                  <input type="text" class="form-control" id="size" value="<?php echo $r['size']; ?>" name="size" aria-describedby="sizeHelp" placeholder="Masukkan Size Barang">
+                  <small id="sizeHelp" class="form-text text-muted">Masukkan Size Barang</small>
+                </div>
+
   <div class="form-group">
     <label for="exampleInputEmail1">Stok Barang</label>
     <input type="text" class="form-control" value="<?php echo $r['stok']; ?>" id="exampleInputEmail1" name="stok" aria-describedby="emailHelp" placeholder="Masukkan Stok Barang">

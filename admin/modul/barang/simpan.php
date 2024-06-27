@@ -1,6 +1,15 @@
 <?php
-include "sesi_admin.php";
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 
+include "sesi_admin.php";
+require 'vendor/autoload.php';
+
+use PhpOffice\PhpSpreadsheet\IOFactory;include "sesi_admin.php";
+
+if(isset($_POST['import'])){
+var_dump(12);die;
+}
 if(isset($_POST['simpan'])){
     include "../koneksi.php";
     
@@ -52,4 +61,7 @@ if(isset($_POST['simpan'])){
     echo "Invalid access.";
     die;
 }
+
+
+
 ?>
