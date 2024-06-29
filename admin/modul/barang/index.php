@@ -10,6 +10,8 @@ switch($modul){
 	case 'ubah': include "modul/barang/ubah.php"; break;
 	case 'update': include "modul/barang/update.php"; break;
 	case 'excel': include "modul/barang/excel.php"; break;
+	case 'load_more': include "modul/barang/load_more.php"; break;
+	case 'filter': include "modul/barang/filter.php"; break; // New case for filtering
 	
 }
 ?>

@@ -31,8 +31,7 @@ while ($row=mysqli_fetch_array($data_rak)) {
   <tr>
                                          
                                                 <td><?php echo $no++ ?></td>
-                                                <td><a href="#"><?php echo $row['nama_rak']; ?></a> </td>
-                                              
+                                                <td><a target="_blank" href="?m=barang&s=filter&filter=<?php echo $row['nama_rak']; ?>"><?php echo $row['nama_rak']; ?></a></td>
 
 
 

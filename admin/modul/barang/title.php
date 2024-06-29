@@ -208,7 +208,7 @@
       </div>
 
 
-      <div class="row">
+      <div class="row" style="display: none;">
         <center>
           <form action="" method="POST">
             <label>Cari Barang</label>
@@ -217,7 +217,7 @@
         </center>
       </div>
 
-      <div class="row">
+      <div class="row" style="margin-top: 10px;">
         <?php include 'paging.php'; ?>
       </div>
 

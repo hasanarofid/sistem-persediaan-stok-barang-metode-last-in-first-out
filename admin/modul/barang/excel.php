@@ -69,7 +69,7 @@ if(isset($_POST['import'])){
 
     
             $sql = "INSERT INTO tb_barang (foto, nama_brg, stok, rak, warna, size, supplier) 
-            VALUES ('$foto', '$nama_brg', '$stok', '$id_rak', '$warna', '$size', '$id_supplier')";
+            VALUES ('$foto', '$nama_brg', '$stok', '$nama_rak', '$warna', '$size', '$id_supplier')";
             mysqli_query($koneksi, $sql);
         }
     
