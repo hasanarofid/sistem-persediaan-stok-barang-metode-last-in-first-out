@@ -113,11 +113,8 @@
     <input type="file"  aria-describedby="emailHelp" name="inpfoto" placeholder="Masukkan Foto">
     <small id="emailHelp" class="form-text text-muted">Masukkan Foto</small>
   </div>
-        <div class="form-group" style="display: none;">
-    <label for="exampleInputEmail1">Kode Barang</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" name="kode_brg" value="<?php echo $r['kode_brg']; ?>" aria-describedby="emailHelp" placeholder="Masukkan Kode Barang">
+   <input type="hidden" class="form-control" id="exampleInputEmail1" name="kode_brg" value="<?php echo $r['kode_brg']; ?>" aria-describedby="emailHelp" placeholder="Masukkan Kode Barang">
   
-  </div>
   <div class="form-group">
     <label for="exampleInputEmail1">Nama Barang</label>
     <input type="text" class="form-control" id="exampleInputEmail1" value="<?php echo $r['nama_brg']; ?>" name="nama_brg" aria-describedby="emailHelp" placeholder="Masukkan Nama Barang">
