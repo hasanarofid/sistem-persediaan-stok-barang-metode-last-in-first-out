@@ -8,6 +8,7 @@ require 'vendor/autoload.php';
 use PhpOffice\PhpSpreadsheet\IOFactory;
 
 if(isset($_POST['import'])){
+    var_dump(1);
     include "../koneksi.php";
     
     $file_mimes = array('application/vnd.ms-excel','application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');

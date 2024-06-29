@@ -122,11 +122,7 @@
                   <label for="foto">Foto Barang</label>
                   <input type="file" class="form-control-file" id="foto" name="foto">
                 </div>
-                <div class="form-group">
-                  <label for="exampleInputEmail1">Kode Barang</label>
-                  <input type="text" class="form-control" id="exampleInputEmail1" name="kode_brg" maxlength="5" aria-describedby="emailHelp" placeholder="Masukkan Kode Barang">
-                  <small id="emailHelp" class="form-text text-muted">Masukkan Kode Barang</small>
-                </div>
+                
                 <div class="form-group">
                   <label for="exampleInputEmail1">Nama Barang</label>
                   <input type="text" class="form-control" id="exampleInputEmail1" name="nama_brg" aria-describedby="emailHelp" placeholder="Masukkan Nama Barang">
@@ -195,7 +191,7 @@
                           <span aria-hidden="true">&times;</span>
                       </button>
                   </div>
-                  <form action="?m=barang&s=simpan" method="POST" enctype="multipart/form-data">
+                  <form action="?m=barang&s=excel" method="POST" enctype="multipart/form-data">
                       <div class="modal-body">
                           <div class="form-group">
                               <label for="file">Excel File</label>

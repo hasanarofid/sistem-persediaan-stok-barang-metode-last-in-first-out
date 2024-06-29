@@ -8,7 +8,6 @@ include "sesi_admin.php";
 if(isset($_POST['simpan'])){
     include "../koneksi.php";
     
-    $kode_brg = $_POST['kode_brg'];
     $nama_brg = $_POST['nama_brg'];
     $stok = $_POST['stok'];
     $rak = $_POST['rak'];
@@ -41,8 +40,8 @@ if(isset($_POST['simpan'])){
     }
 
     // Prepare and execute the SQL query
-    $sql = "INSERT INTO tb_barang (kode_brg, nama_brg, stok, rak, supplier, foto,warna,size) 
-            VALUES ('$kode_brg', '$nama_brg', '$stok', '$rak', '$supplier', '$fotobaru', '$warna', '$size')";
+    $sql = "INSERT INTO tb_barang ( nama_brg, stok, rak, supplier, foto,warna,size) 
+            VALUES ('$nama_brg', '$stok', '$rak', '$supplier', '$fotobaru', '$warna', '$size')";
 
     if(mysqli_query($koneksi, $sql)){
         echo '<script>window.history.back()</script>';

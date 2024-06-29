@@ -20,7 +20,7 @@ $nomor = $halaman_awal+1;
 
 
 
-
+$no = 1;
 while ($row=mysqli_fetch_array($data_rak)) {
 	
 
@@ -30,8 +30,8 @@ while ($row=mysqli_fetch_array($data_rak)) {
 
   <tr>
                                          
-                                                <td><?php echo $row['id_rak']; ?></td>
-                                                <td><?php echo $row['nama_rak']; ?></td>
+                                                <td><?php echo $no++ ?></td>
+                                                <td><a href="#"><?php echo $row['nama_rak']; ?></a> </td>
                                               
 
 
