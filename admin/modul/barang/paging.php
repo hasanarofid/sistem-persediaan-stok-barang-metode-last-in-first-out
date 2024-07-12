@@ -48,6 +48,8 @@
         $result = mysqli_query($koneksi, $query);
 
         while ($row = mysqli_fetch_assoc($result)) {
+            $waButtonClass = ($row['stok'] < 5) ? '' : 'disabled';
+            $waButtonHref = ($row['stok'] < 5) ? 'href="https://wa.me/6285723327590?text=Need%20to%20restock%20item%20' . $row['nama_brg'] . '"' : 'href="#"';
             echo '<div class="col-md-3">';
             echo '  <div class="card mb-3 shadow-sm">';
             echo '      <img class="card-img-top" src="../images/admin/' . $row['foto'] . '" alt="' . $row['nama_brg'] . '">';
@@ -63,6 +65,7 @@
             echo '          </p>';
             echo '          <a href="index.php?m=barang&s=hapus&kode_brg=' . $row['kode_brg'] . '" onclick="return confirm(\'Yakin Akan dihapus?\')" class="btn btn-danger">Hapus</a>';
             echo '          <a href="index.php?m=barang&s=ubah&kode_brg=' . $row['kode_brg'] . '" class="btn btn-primary">Ubah</a>';
+            echo '          <a ' . $waButtonHref . ' class="btn btn-success ' . $waButtonClass . '">Contact Supplier</a>';
             echo '      </div>';
             echo '  </div>';
             echo '</div>';
@@ -89,6 +92,8 @@
                     const data = JSON.parse(xhr.responseText);
                     const container = document.getElementById('card-container');
                     data.forEach(row => {
+                        const waButtonClass = row.stok < 5 ? '' : 'disabled';
+                        const waButtonHref = row.stok < 5 ? 'href="https://wa.me/6285723327590?text=Need%20to%20restock%20item%20' + row.nama_brg + '"' : 'href="#"';
                         const card = document.createElement('div');
                         card.className = 'col-md-3';
                         card.innerHTML = `
@@ -106,6 +111,7 @@
                                     </p>
                                     <a href="index.php?m=barang&s=hapus&kode_brg=${row.kode_brg}" onclick="return confirm('Yakin Akan dihapus?')" class="btn btn-danger">Hapus</a>
                                     <a href="index.php?m=barang&s=ubah&kode_brg=${row.kode_brg}" class="btn btn-primary">Ubah</a>
+                                    <a ${waButtonHref} class="btn btn-success ${waButtonClass}">Contact Supplier</a>
                                 </div>
                             </div>`;
                         container.appendChild(card);
