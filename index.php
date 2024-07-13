@@ -25,6 +25,10 @@
     height: 40px; /* Sesuaikan tinggi gambar dengan kebutuhan Anda */
     margin-right: 10px; /* Sesuaikan margin antara gambar dan teks */
 }
+
+
+
+
 </style>
 
 <!-- Menu -->
