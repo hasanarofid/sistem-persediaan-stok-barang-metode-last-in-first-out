@@ -1,5 +1,6 @@
 <?php
-
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 include_once "sesi_admin.php";
 
 $modul=(isset($_GET['s']))?$_GET['s']:"awal";
