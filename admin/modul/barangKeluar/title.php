@@ -1,5 +1,6 @@
  <?php 
-
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
   date_default_timezone_set("Asia/Jakarta");
   $tanggalSekarang = date("Y-m-d");
   $jamSekarang = date("h:i a");
@@ -142,64 +143,46 @@
     <small id="emailHelp" class="form-text text-muted">Masukkan No Barang Keluar</small>
   </div>
         	        <div class="form-group">
-    <label for="exampleInputEmail1">Nomor Ajuan</label>
+    <label for="exampleInputEmail1">List Barang</label>
    <?php 
 						include ("../koneksi.php");
-						$supp = ("SELECT * FROM tb_ajuan WHERE val = '1' ");
-						$result = mysqli_query($koneksi, $supp);
+					// Correct SQL query to only fetch items with stock greater than 0
+$supp = "SELECT * FROM tb_barang WHERE stok > 0";
+$result = mysqli_query($koneksi, $supp);
 
-						$jsArray = "var prdName = new Array();";
+$jsArray = "var prdName = new Array();";
 
-						echo '<select name="no_ajuan" onchange="changeValue(this.value)">';
-						echo '<option>--- PILIH ---</option>';
+echo '<select name="kode_brg" class="form-control" onchange="changeValue(this.value)">';
+echo '<option>--- PILIH ---</option>';
 
-						while ($row = mysqli_fetch_array($result)) {
-							
-								echo '<option value="'. $row['no_ajuan'] .'">AJ0'.$row['no_ajuan'].'</option>';
-								$jsArray .= "prdName['". $row['no_ajuan'] ."'] 
-								= {tanggal_ajuan:'". addslashes($row['tanggal']) ."',
-									petugas:'". addslashes($row['petugas']) ."',
-									kode_brg:'". addslashes($row['kode_brg']) ."',
-									nama_brg:'". addslashes($row['nama_brg']) ."',
-									stok:'". addslashes($row['stok']) ."',
-									jml_ajuan:'". addslashes($row['jml_ajuan']) ."',
-									val:'". addslashes($row['val']) ."'
+while ($row = mysqli_fetch_assoc($result)) {
+    echo '<option value="'. $row['kode_brg'] .'">'. $row['kode_brg'] . ' - ' . $row['nama_brg'] . '</option>';
+    $jsArray .= "prdName['". $row['kode_brg'] ."'] = {
+        kode_brg:'". addslashes($row['kode_brg']) ."',
+        nama_brg:'". addslashes($row['nama_brg']) ."',
+        stok:'". addslashes($row['stok']) ."'
+    };";
+}
 
-								};";
-							}
-
-						echo '</select>';
+echo '</select>';
 					?>
 					<script type="text/javascript">
 						<?php echo $jsArray; ?>
-						function changeValue(id){
-							document.getElementById('prd_tanggal').value = prdName[id].tanggal_ajuan;
-							document.getElementById('prd_petugas').value = prdName[id].petugas;
-							document.getElementById('prd_kodebrng').value = prdName[id].kode_brg;
-							document.getElementById('prd_namabrg').value = prdName[id].nama_brg;
-							document.getElementById('prd_stokbrga').value = prdName[id].stok;
-							document.getElementById('prd_jmlajuan').value = prdName[id].jml_ajuan;
-							document.getElementById('prd_val').value = prdName[id].val;
-
-						}		
+            function changeValue(id){
+    document.getElementById('prd_kodebrng').value = prdName[id].kode_brg;
+    document.getElementById('prd_namabrg').value = prdName[id].nama_brg;
+    document.getElementById('prd_stokbrga').value = prdName[id].stok;
+}
 					</script>
   </div>
-        <div class="form-group">
-    <label for="exampleInputEmail1">Tanggal Ajuan</label>
-    <input type="text" readonly="" class="form-control" id="prd_tanggal" name="tanggal_ajuan" aria-describedby="emailHelp" placeholder="Masukkan Tanggal Ajuan">
-    <small id="emailHelp" class="form-text text-muted">Masukkan Tanggal Ajuan</small>
-  </div>
+       
           <div class="form-group">
     <label for="exampleInputEmail1">Tanggal Keluar</label>
     <input type="text" class="form-control" id="exampleInputEmail1" name="tanggal_out" value="<?php echo $tanggalSekarang; ?>" aria-describedby="emailHelp" placeholder="Masukkan Tanggal Keluar">
     <small id="emailHelp" class="form-text text-muted">Masukkan Tanggal Keluar</small>
   </div>
 
-  <div class="form-group">
-    <label for="exampleInputEmail1">Petugas</label>
-    <input type="text" readonly="" class="form-control" id="prd_petugas" name="petugas" aria-describedby="emailHelp" placeholder="Masukkan Petugas">
-
-  </div>
+  
         
           <div class="form-group">
     <label for="exampleInputEmail1">Kode Barang</label>
@@ -217,11 +200,7 @@
     <input type="text" class="form-control" id="prd_stokbrga" name="stok" readonly="" aria-describedby="emailHelp" placeholder="Masukkan Stok Barang">
 
   </div>
-          <div class="form-group">
-    <label for="exampleInputEmail1">Jumlah Ajuan</label>
-    <input type="text" class="form-control" readonly="" id="prd_jmlajuan" name="jml_ajuan" aria-describedby="emailHelp" placeholder="Masukkan Jumlah Masuk">
-  
-  </div>
+          
             <div class="form-group">
     <label for="exampleInputEmail1">Jumlah Keluar</label>
     <input type="text" class="form-control" id="exampleInputEmail1" name="jml_keluar" aria-describedby="emailHelp" placeholder="Masukkan Jumlah Masuk">
@@ -252,13 +231,11 @@
                                         <thead>
                                             <tr>
                                  <th>No Barang Keluar</th>               
-                                 <th>No Ajuan</th>
-                                 <th>Tanggal Ajuan</th>
+                                
                                  <th>Tanggal Keluar</th>
-                                 <th>petugas</th>
+                              
                                  <th>kode_brg</th>
                                  <th>nama_brg</th>
-                                 <th>jml_ajuan</th>
                                  <th>stok</th>
                                   <th>jml_keluar</th>
                                  <th>admin</th>
@@ -267,7 +244,7 @@
 
                                 
                                 
-                                <th>Aksi</th>
+                                <!-- <th>Aksi</th> -->
                                                 
                                             </tr>
                                         </thead>

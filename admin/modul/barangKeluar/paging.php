@@ -30,21 +30,19 @@ while ($row=mysqli_fetch_array($data_rak)) {
 
   <tr>
                                                  <td><?php echo $row['no_brg_out']; ?></td>
-                                                <td><?php echo $row['no_ajuan']; ?></td>
-                                                <td><?php echo $row['tanggal_ajuan']; ?></td>
+
                                                 <td><?php echo $row['tanggal_out']; ?></td>
-                                                <td><?php echo $row['petugas']; ?></td>
+
                                                 <td><?php echo $row['kode_brg']; ?></td>
                                                 <td><?php echo $row['nama_brg']; ?></td>
                                                 <td><?php echo $row['stok']; ?></td>
-                                                <td><?php echo $row['jml_ajuan']; ?></td>
                                                  <td><?php echo $row['jml_keluar']; ?></td>
                                               <td><?php echo $row['admin']; ?></td>
                                            
 
 
 
-                                                <td><a href="index.php?m=barangKeluar&s=hapus&no_brg_out=<?php echo $row['no_brg_out'];?>" onclick="return confirm('Yakin Akan dihapus?')"><button class="btn btn-danger">Hapus</button></a> </td>
+                                                <!-- <td><a href="index.php?m=barangKeluar&s=hapus&no_brg_out=<?php echo $row['no_brg_out'];?>" onclick="return confirm('Yakin Akan dihapus?')"><button class="btn btn-danger">Hapus</button></a> </td> -->
 
 
                                                 

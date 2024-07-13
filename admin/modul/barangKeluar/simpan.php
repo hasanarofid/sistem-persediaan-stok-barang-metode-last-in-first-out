@@ -1,16 +1,17 @@
 <?php 
-
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 if (isset($_POST['simpan'])) {
 	include('../koneksi.php');
 	$no_brg_out = $_POST['no_brg_out'];
-	$no_ajuan 	= $_POST['no_ajuan'];
-	$tanggal_ajuan = $_POST['tanggal_ajuan'];
+	$no_ajuan 	= 1;
+	$tanggal_ajuan = date('Y-m-d');
 	$tanggal_out = $_POST['tanggal_out'];
-	$petugas = $_POST['petugas'];
+	$petugas = 1;
 	$kode_brg = $_POST['kode_brg'];
 	$nama_brg = $_POST['nama_brg'];
 	$stok = $_POST['stok'];
-	$jml_ajuan = $_POST['jml_ajuan'];
+	$jml_ajuan = 1;
 	$jml_keluar = $_POST['jml_keluar'];
 	$admin = $_POST['admin'];
 	
