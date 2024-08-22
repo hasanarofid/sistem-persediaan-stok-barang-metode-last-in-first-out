@@ -255,11 +255,11 @@
     </div>
   </div>
 </div>
-<div class="row">
+<!-- <div class="row">
             <div class="col-md-12 text-right">
                 <a href="?m=rekap&s=export" class="btn btn-success">Export to Excel</a>
             </div>
-        </div>
+        </div> -->
 
          <div class="row">
 
