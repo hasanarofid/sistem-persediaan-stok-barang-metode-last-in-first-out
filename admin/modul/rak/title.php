@@ -81,7 +81,7 @@
               </li>
                             <li>
                 <a href="?m=rak&s=awal">
-                  <i class="fa fa-cubes"></i> Data Rak
+                  <i class="fa fa-cubes"></i> Data Katalog
                 </a>
               </li>
                             <li>
@@ -90,9 +90,21 @@
                 </a>
               </li>
 
-                            <li>
+              <li>
+                <a href="?m=barangMasuk&s=awal">
+                  <i class="fa fa-cart-arrow-down"></i> Data Barang Masuk
+                </a>
+              </li>
+
+              <li>
                 <a href="?m=barangKeluar&s=awal">
                   <i class="fa fa-cart-arrow-down"></i> Data Barang Keluar
+                </a>
+              </li>
+
+              <li>
+                <a href="?m=rekap&s=awal">
+                  <i class="fa fa-history"></i> Rekap
                 </a>
               </li>
               <li>
@@ -110,7 +122,7 @@
       <div id="page-wrapper">
         <div class="row">
           <div class="col-lg-12">
-            <h1 class="page-header">Data Rak</h1>
+            <h1 class="page-header">Data Katalog</h1>
           </div>
         </div>
 
@@ -124,7 +136,7 @@
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Tambah data rak</h5>
+        <h5 class="modal-title" id="exampleModalLongTitle">Tambah Data Katalog</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>

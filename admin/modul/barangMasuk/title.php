@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Input Data Rak</title>
+    <title>Input Data Katalog</title>
 
     <!-- boootstrap -->
     <link href="../vendor/css/bootstrap/bootstrap.min.css" rel="stylesheet">
@@ -63,8 +63,8 @@
         <!-- menu samping -->
         <div class="navbar-default sidebar" role="navigation">
           <div class="sidebar-nav navbar-collapse">
-            <ul class="nav" id="side-menu">
-              <li>
+          <ul class="nav" id="side-menu">
+                                        <li>
                 <a href="?m=awal.php">
                   <i class="fa fa-dashboard"></i> Beranda
                 </a>
@@ -74,38 +74,46 @@
                   <i class="fa fa-user"></i> Data Admin
                 </a>
               </li>
+               <!-- <li>
+                <a href="?m=petugas&s=awal">
+                  <i class="fa fa-users"></i> Data Petugas
+                </a>
+              </li> -->
                             <li>
-                <a href="data_karyawan.php">
+                <a href="?m=supplier&s=awal">
                   <i class="fa fa-building"></i> Data Supplier
                 </a>
               </li>
                             <li>
-                <a href="data_karyawan.php">
-                  <i class="fa fa-cubes"></i> Data Rak
+                <a href="?m=rak&s=awal">
+                  <i class="fa fa-cubes"></i> Data Katalog
                 </a>
               </li>
                             <li>
-                <a href="data_karyawan.php">
-                  <i class="fa fa-shopping-cart"></i> Data Barang
+                <a href="?m=barang&s=awal">
+                  <i class="fa fa-archive"></i> Data Barang
                 </a>
               </li>
-                            <li>
-                <a href="data_karyawan.php">
-                  <i class="fa fa-cart-plus"></i> Data Barang Masuk
+
+              <li>
+                <a href="?m=barangMasuk&s=awal">
+                  <i class="fa fa-cart-arrow-down"></i> Data Barang Masuk
                 </a>
               </li>
-                            <li>
-                <a href="data_karyawan.php">
-                  <i class="fa fa-gift"></i> Data Ajuan
-                </a>
-              </li>
-                            <li>
-                <a href="data_karyawan.php">
+
+              <li>
+                <a href="?m=barangKeluar&s=awal">
                   <i class="fa fa-cart-arrow-down"></i> Data Barang Keluar
                 </a>
               </li>
+
               <li>
-                <a href="logout.php">
+                <a href="?m=rekap&s=awal">
+                  <i class="fa fa-history"></i> Rekap
+                </a>
+              </li>
+              <li>
+                <a href="logout.php" onclick="return confirm('yakin ingin logout?')">
                   <i class="fa fa-warning"></i> Logout
                 </a>
               </li>
@@ -230,13 +238,7 @@
     <input type="text" class="form-control" id="exampleInputEmail1" value="<?php echo $jamSekarang; ?>" name="jam" aria-describedby="emailHelp" placeholder="Masukkan Jam">
     <small id="emailHelp" class="form-text text-muted">Masukkan Jam</small>
   </div>
-          <div class="form-group">
-    <label for="exampleInputEmail1">Admin</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" readonly="" name="petugas" aria-describedby="emailHelp" placeholder="Masukkan Nama Admin">
-    <small id="emailHelp" class="form-text text-muted">Masukkan Nama Admin</small>
-  </div>
-         
-  
+          
 
       </div>
       <div class="modal-footer">
@@ -264,7 +266,6 @@
                                  <th>Stok</th>
                                  <th>Jumlah Masuk</th>
                                  <th>Jam</th>
-                                 <th>Petugas</th>
 
                                 
                                 

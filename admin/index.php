@@ -11,6 +11,8 @@ switch($modul){
     case 'supplier': $aktif="Supplier"; $judul="Modul Supplier "; include "modul/supplier/index.php"; break;
     case 'rak': $aktif="Rak"; $judul="Modul Rak "; include "modul/rak/index.php"; break;
     case 'barang': $aktif="Barang"; $judul="Modul Barang"; include "modul/barang/index.php"; break;
+    case 'rekap': $aktif="Rekap"; $judul="Modul Rekap"; include "modul/rekap/index.php"; break;
+     case 'barangMasuk': $aktif="Barang Masuk"; $judul="Modul Barang Masuk "; include "modul/barangMasuk/index.php"; break;
      case 'barangKeluar': $aktif="Barang Keluar"; $judul="Modul Barang Keluar "; include "modul/barangKeluar/index.php"; break;
 }
 

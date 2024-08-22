@@ -10,7 +10,7 @@ if(isset($_POST['simpan'])) {
 	$stok	= $_POST['stok'];
 	$jml_masuk	= $_POST['jml_masuk'];
 	$jam		= $_POST['jam'];
-	$petugas		= $_POST['petugas'];
+	$petugas		= 1;
 
 
 	$tambahStok 	= $stok + $jml_masuk;

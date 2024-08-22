@@ -67,7 +67,7 @@
             </li>
             <li>
               <a href="?m=rak&s=awal">
-                <i class="fa fa-cubes"></i> Data Rak
+                <i class="fa fa-cubes"></i> Data Katalog
               </a>
             </li>
             <li>
@@ -76,10 +76,22 @@
               </a>
             </li>
             <li>
-              <a href="?m=barangKeluar&s=awal">
-                <i class="fa fa-cart-arrow-down"></i> Data Barang Keluar
-              </a>
-            </li>
+                <a href="?m=barangMasuk&s=awal">
+                  <i class="fa fa-cart-arrow-down"></i> Data Barang Masuk
+                </a>
+              </li>
+
+              <li>
+                <a href="?m=barangKeluar&s=awal">
+                  <i class="fa fa-cart-arrow-down"></i> Data Barang Keluar
+                </a>
+              </li>
+
+              <li>
+                <a href="?m=rekap&s=awal">
+                  <i class="fa fa-history"></i> Rekap
+                </a>
+              </li>
             <li>
               <a href="logout.php" onclick="return confirm('yakin ingin logout?')">
                 <i class="fa fa-warning"></i> Logout

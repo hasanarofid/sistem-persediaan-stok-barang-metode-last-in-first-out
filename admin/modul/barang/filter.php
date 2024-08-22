@@ -77,7 +77,7 @@ $result = mysqli_query($koneksi, $query);
             </li>
             <li>
               <a href="?m=rak&s=awal">
-                <i class="fa fa-cubes"></i> Data Rak
+                <i class="fa fa-cubes"></i> Data Katalog
               </a>
             </li>
             <li>
